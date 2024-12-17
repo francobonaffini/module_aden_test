@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="view_form_programa" model="ir.ui.view">
+            <field name="name">mi.modulo.programa.form</field>
+            <field name="model">mi.modulo.programa</field>
+            <field name="arch" type="xml">
+                <form string="Programa">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="descripcion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_list_programa" model="ir.ui.view">
+            <field name="name">mi.modulo.programa.list</field>
+            <field name="model">mi.modulo.programa</field>
+            <field name="arch" type="xml">
+                <list string="Programas">
+                    <field name="id"/>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_programas" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">mi.modulo.programa</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_root" name="Porgramas"/>
+        <menuitem id="menu_programas" name="Programa" parent="menu_root"/>
+        <menuitem id="menu_programa_list" name="Lista Programas" parent="menu_programas" action="action_programas"/>
+      
+    </data>
+</odoo>
