@@ -25,6 +25,5 @@ class MiModuloController(http.Controller):
                     'nombre': alumno.pais.name
                 }
             })
-        
-        # Devolver la respuesta como JSON
+
         return json.dumps(result)

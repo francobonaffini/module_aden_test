@@ -22,7 +22,6 @@ class Alumno(models.Model):
         for record in self:
             record.nombre_completo = f"{record.nombre} {record.apellido}"
 
-
 class Programa(models.Model):
     _name = 'mi.modulo.programa'
     _description = 'Programa'
@@ -31,7 +30,6 @@ class Programa(models.Model):
     nombre = fields.Char(string='Nombre del Programa', required=True)
     descripcion = fields.Text(string='Descripción')
 
- 
 class Inscripcion(models.Model):
     _name = 'mi.modulo.inscripcion'
     _description = 'Inscripción de Alumno a Programa'

@@ -1,0 +1,10 @@
+<odoo>
+    <record id="group_editar_todo" model="res.groups"> 
+        <field name="name">Si Edicion</field>
+        <field name="category_id" ref="base.group_erp_manager"/> <!-- Este valor de categoría, se obtiene de la metadata de la lista de grupos y del grupo admin en este caso -->
+    </record>
+    <record id="group_no_editar_todo" model="res.groups"> 
+        <field name="name">No Edicion</field>
+        <field name="category_id" ref="base.group_erp_manager"/> 
+    </record>
+</odoo>
